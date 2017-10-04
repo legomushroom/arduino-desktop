@@ -1,0 +1,34 @@
+$gridSize: 10px;
+
+.serverStatus {
+  border: 1px solid transparent;
+  position: fixed;
+  top: 1*$gridSize;
+  left: 1*$gridSize;
+}
+
+.serverStatusCircle {
+  display: inline-block;
+  width: $gridSize;
+  height: $gridSize;
+  border-radius: 50%;
+
+  &.isRed {
+    background-color: #C70144;
+  }
+
+  &.isGreen {
+    background: #58C701;
+  }
+}
+
+.title {
+  font-size: 12px;
+  line-height: 0;
+  letter-spacing: .25px;
+  color: #888;
+  margin-left: .5*$gridSize;
+  position: relative;
+  top: -.1*$gridSize;
+}
+

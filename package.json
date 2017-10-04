@@ -4,11 +4,22 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "npm run compile && node dist/app.js",
+    "compile": "tsc",
+    "dev": "./node_modules/nodemon/bin/nodemon.js -e ts --exec \"npm run start\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Oleg Solomka",
   "license": "ISC",
   "dependencies": {
-    "serialport": "^5.0.0"
+    "ejs": "^2.5.7",
+    "express": "^4.16.1",
+    "serialport": "^5.0.0",
+    "socket.io": "^2.0.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.0.37",
+    "nodemon": "^1.12.1",
+    "typescript": "^2.5.3"
   }
 }

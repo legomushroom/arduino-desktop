@@ -1,0 +1,1 @@
+export const pendingPage: string;

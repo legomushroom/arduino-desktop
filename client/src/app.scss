@@ -1,0 +1,23 @@
+
+body,
+html {
+  background: #222;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  letter-spacing: .25px;
+}
+
+::selection {
+  background: #fff;
+  color: #111;
+}
+
+a {
+  color: inherit;
+}
+
+.app {
+  outline: 1px solid transparent;
+}

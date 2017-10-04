@@ -1,0 +1,30 @@
+$gridSize: 10px;
+
+.dashboard {
+    display: inline-block;
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.distance {
+    font-size: 16*$gridSize;
+    font-family: sans-serif;
+    font-weight: 100;
+    margin-bottom: 1*$gridSize;
+    margin-right: -4*$gridSize;
+}
+
+.distance-units {
+    opacity: .35;
+    font-size: 3*$gridSize;
+}
+
+.button {
+    & + .button {
+        margin-left: 2*$gridSize;
+    }
+}
+

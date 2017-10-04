@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "alwaysStrict": true,
+        "module": "es6",
+        "target": "es5",
+        "moduleResolution": "node",
+        "jsx": "preserve",
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "baseUrl": ".",
+        "jsx": "react",
+        "jsxFactory": "h",
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "paths": {
+            "components/*": ["src/components/*"],
+            "decorators/*": ["src/decorators/*"],
+            "reducers/*": ["src/reducers/*"],
+            "utils/*": ["src/utils/*"],
+            "css/*": ["src/css/*"]
+        }
+    },
+    "include": [
+        "src/*.ts",
+        "src/*.tsx"
+    ]
+}

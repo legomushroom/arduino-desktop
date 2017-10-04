@@ -1,0 +1,38 @@
+{
+  "name": "web-sign-up",
+  "version": "0.10.0",
+  "description": "private preview sign up page",
+  "main": "src/app.tsx",
+  "scripts": {
+    "test": "test",
+    "start": "webpack --watch",
+    "build": "webpack",
+    "generate:css:types": "tcm -p src/**/*.scss"
+  },
+  "dependencies": {
+    "preact": "^8.2.1",
+    "preact-redux": "2.0.2",
+    "preact-router": "^2.5.6",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "relative-date": "^1.1.3",
+    "socket.io-client": "^2.0.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "node-sass": "^4.5.3",
+    "postcss-loader": "^2.0.6",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "ts-loader": "^2.3.2",
+    "typed-css-modules": "^0.3.0",
+    "typescript": "^2.4.2",
+    "typings-for-css-modules-loader": "^1.5.0",
+    "unminified-webpack-plugin": "^1.2.0",
+    "webpack": "^3.5.4"
+  },
+  "author": "Oleg Solomka <legomushroom@gmail.com>",
+  "license": ""
+}
