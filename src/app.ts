@@ -56,13 +56,27 @@ io.on('connection', function(socket) {
   serialPort.on('open', () => {
     console.log('serial port connected');
 
+    let bufferString = '';
     serialPort.on('data', (bufferIn) => {
       const buffer = new Buffer(bufferIn);
-      const bufferString = buffer.toString();
-      console.log(bufferString);
-      const distance = parseFloat(bufferString);
+      bufferString += buffer.toString();
+      const split = bufferString.split('⌾');
+      
+      if (split.length > 2) {
+        bufferString = split[split.length - 1];
+        const message = split[split.length - 2];
 
-      socket.emit('distance', distance);
+        const messageSplit = message.split(':');
+
+        if (messageSplit[0] === 'distance') {
+          socket.emit('distance', parseInt(messageSplit[1], 10));
+        }
+
+        if (messageSplit[0] === 'calibration') {
+          console.log(messageSplit[1]);
+          // socket.emit('distance', parseInt(messageSplit[1], 10));
+        }
+      }
     });
 
     setTimeout(()=> {
